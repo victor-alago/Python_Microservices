@@ -4,7 +4,7 @@ Converting mp4 videos to mp3 in a microservices architecture.
 ## Architecture
 
 <p align="center">
-  <img src="./Project documentation/ProjectArchitecture.png" width="600" title="Architecture" alt="Architecture">
+  <img src="./Project documentation Screenshots/ProjectArchitecture.png" width="600" title="Architecture" alt="Architecture">
   </p>
 
 ## Deploying a Python-based Microservice Application on AWS EKS
@@ -64,9 +64,9 @@ Follow these steps to deploy your microservice application:
    - Follow the steps mentioned in [this](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html) documentation using root user
    - After creating it will look like this:
 
-   <p align="center">
+   <!-- <p align="center">
   <img src="./Project documentation/ekscluster_role.png" width="600" title="ekscluster_role" alt="ekscluster_role">
-  </p>
+  </p> -->
 
    - Please attach `AmazonEKS_CNI_Policy` explicitly if it is not attached by default
 
@@ -75,11 +75,11 @@ Follow these steps to deploy your microservice application:
    - Please note that you do NOT need to configure any VPC CNI policy mentioned after step 5.e under Creating the Amazon EKS node IAM role
    - Simply attach the following policies to your role once you have created `AmazonEKS_CNI_Policy` , `AmazonEBSCSIDriverPolicy` , `AmazonEC2ContainerRegistryReadOnly`
      incase it is not attached by default
-   - Your AmazonEKSNodeRole will look like this: 
 
-<p align="center">
+
+<!-- <p align="center">
   <img src="./Project documentation/node_iam.png" width="600" title="Node_IAM" alt="Node_IAM">
-  </p>
+  </p> -->
 
 4. **Open EKS Dashboard:**
    - Navigate to the Amazon EKS service from the AWS Console dashboard.
@@ -109,16 +109,16 @@ Follow these steps to deploy your microservice application:
 
 **NOTE:** Ensure that all the necessary ports are open in the node security group.
 
-<p align="center">
+<!-- <p align="center">
   <img src="./Project documentation/inbound_rules_sg.png" width="600" title="Inbound_rules_sg" alt="Inbound_rules_sg">
-  </p>
+  </p> -->
 
 #### Enable EBS CSI Addon
 1. enable addon `ebs csi` this is for enabling pvcs once cluster is created
 
-<p align="center">
+<!-- <p align="center">
   <img src="./Project documentation/ebs_addon.png" width="600" title="ebs_addon" alt="ebs_addon">
-  </p>
+  </p> -->
 
 #### Deploying your application on EKS Cluster
 
